@@ -1,3 +1,6 @@
 function upperCase() {
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
+
+    let str1 = "Hello World!"; 
+    document.getElementById("parent-box").innerHTML 
+    = str1.toLowerCase();
 }

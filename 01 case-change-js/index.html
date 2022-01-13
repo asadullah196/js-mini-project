@@ -18,9 +18,16 @@
                 <textarea id="parent-box" name="" rows="4" cols="50" placeholder="Your content goes here"></textarea>
 
                 <br>
-                <button type="button" onclick="upperCase();">Upper Case</button>
+
+                <script>
+                    var name = document.getElementById("parent-box").value;
+                    document.getElementById("parent-box").innerHTML = name;
+                </script>
+
+                <button type="button" onclick="upperCase(Asad);">Upper Case</button>
 
             </div>
+
     </section>
 
     <script src="./js/main.js"></script>
