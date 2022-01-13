@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <title> Case Convertion Application </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
     <section class="main-body">
-        <div class="input-area">
-            <h2>CHANGE TEXT CASE</h2>
-            <p>You can change your text into any formate you need by one single click!</p>
+            <div class="input-area" style="text-align: center;">
+                <h2>CHANGE TEXT CASE</h2>
+                <p>You can change your text into any formate you need by one single click!</p>
 
-            <h3>Paste your text in the following box and click on the button.</h3>
+                <h3>Paste your text in the following box and click on the button.</h3>
 
-            <p id="demo"></p>
+                <textarea id="parent-box" name="" rows="4" cols="50" placeholder="Your content goes here"></textarea>
 
-            <script>
-                let text = "HELLO WORLD";
-                document.getElementById("demo").innerHTML = text.charCodeAt(0);
-            </script>
-        </div>
+                <script>
+                    let text = "HELLO WORLD";
+                    document.getElementById("demo").innerHTML = text.charCodeAt(0);
+                </script>
+            </div>
     </section>
 
 </body>
