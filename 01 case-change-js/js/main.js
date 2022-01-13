@@ -1,6 +1,8 @@
 function upperCase() {
 
-    let str1 = "Hello World!"; 
+    var name = document.getElementById("parent-box").value;
+    console.log(name);
+
     document.getElementById("parent-box").innerHTML 
-    = str1.toLowerCase();
+    = name + 5;
 }
