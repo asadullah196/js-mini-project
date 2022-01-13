@@ -1,3 +1,3 @@
-function upperCase(){
-    document.getElementById('parent-box').innerHTML = 5;
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
 }
