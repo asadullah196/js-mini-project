@@ -1,31 +1,20 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title> Case Convertion Application </title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
-    <section class="main-body">
-            <div class="input-area">
-                <h2>CHANGE TEXT CASE</h2>
-                <p>You can change your text into any formate you need by one single click!</p>
+<p>Enter names in the fields, then click "Submit" to submit the form:</p>
 
-                <h3>Paste your text in the following box and click on the button.</h3>
+<form id="frm1" action="/action_page.php">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br><br>
+  <input type="button" onclick="myFunction()" value="Submit">
+</form>
 
-                <textarea id="parent-box" name="" rows="4" cols="50" placeholder="Your content goes here"></textarea>
-
-                <br>
-
-                <button type="button" onclick="upperCase();">Upper Case</button>
-
-            </div>
-
-    </section>
-
-    <script src="./js/main.js"></script>
+<script>
+function myFunction() {
+  document.getElementById("frm1").submit();
+}
+</script>
+<script src="./js/main.js"></script>
 </body>
-
 </html>
