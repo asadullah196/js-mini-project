@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
-<form id="frm1">
-  First name: <input type="text" name="fname" value="Donald"><br>
-</form> 
+    <form id="frm1">
+        <textarea id="w3review" name="w3review" rows="4" cols="50">
+        At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+        </textarea>
+    </form>
 
-<button onclick="myFunction()">Try it</button>
+    <button onclick="myFunction()">Try it</button>
 
-<p id="demo"></p>
+    <p id="demo"></p>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("frm1");
-  var text = "";
-  var i;
-  for (i = 0; i < x.length ;i++) {
-    text += x.elements[i].value + "<br>";
-  }
-  document.getElementById("demo").innerHTML = text;
-}
-</script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("frm1");
+            var text = "";
+            var i;
+            for (i = 0; i < x.length; i++) {
+                text += x.elements[i].value + "<br>";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
 
 </body>
+
 </html>
