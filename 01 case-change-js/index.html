@@ -4,9 +4,8 @@
 <body>
 
     <h1>Add your text in the input box!</h1>
-    <form id="frm1">
-        <p id="modifiedCase"></p>
-        <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Your text goes here"></textarea>
+    <form id="formInput">
+        <textarea id="userInput" name="userInput" rows="4" cols="50" placeholder="Your text goes here"></textarea>
     </form>
 
     <button onclick="lowerCase()">Lower Case</button>
@@ -16,14 +15,13 @@
 
     <script>
         function lowerCase() {
-            var x = document.getElementById("frm1");
+            var x = document.getElementById("formInput");
             var text = "";
             var i;
             for (i = 0; i < x.length; i++) {
                 text += x.elements[i].value;
             }
-            document.getElementById("modifiedCase").innerHTML = text.toLowerCase();
-            document.getElementById('w3review').value = text.toLowerCase();
+            document.getElementById('userInput').value = text.toLowerCase();
         }
     </script>
 
