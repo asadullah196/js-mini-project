@@ -5,21 +5,25 @@
 
     <h1>Add your text in the input box!</h1>
     <form id="frm1">
+        <p id="modifiedCase"></p>
         <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Your text goes here"></textarea>
     </form>
 
-    <button onclick="myFunction()">Try it</button>
+    <button onclick="lowerCase()">Lower Case</button>
+    <button onclick="upperCase()">Upper Case</button>
 
-    <p id="w3review">Hello</p>
+    
+
     <script>
-        function myFunction() {
+        function lowerCase() {
             var x = document.getElementById("frm1");
             var text = "";
             var i;
             for (i = 0; i < x.length; i++) {
-                text += x.elements[i].value + "<br>";
+                text += x.elements[i].value;
             }
-            document.getElementById("w3review").innerHTML = text + 1;
+            document.getElementById("modifiedCase").innerHTML = text.toLowerCase();
+            document.getElementById('w3review').value = text.toLowerCase();
         }
     </script>
 
