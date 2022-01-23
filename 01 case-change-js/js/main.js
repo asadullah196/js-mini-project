@@ -1,8 +1,15 @@
-function upperCase() {
+/**
+ * lowerCase Converstion
+ * 
+ * @returns string/input
+ */
 
-    var name = document.getElementById("parent-box").value;
-    console.log(name);
-
-    document.getElementById("parent-box").innerHTML 
-    = name + 5;
+function lowerCase() {
+    var x = document.getElementById("formInput");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length; i++) {
+        text += x.elements[i].value;
+    }
+    document.getElementById('userInput').value = text.toLowerCase();
 }
