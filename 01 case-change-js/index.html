@@ -3,15 +3,12 @@
 
 <body>
 
+    <h1>Add your text in the input box!</h1>
     <form id="frm1">
-        <textarea id="w3review" name="w3review" rows="4" cols="50">
-        At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
-        </textarea>
+        <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Your text goes here"></textarea>
     </form>
 
     <button onclick="myFunction()">Try it</button>
-
-    <p id="demo"></p>
 
     <script>
         function myFunction() {
@@ -21,7 +18,7 @@
             for (i = 0; i < x.length; i++) {
                 text += x.elements[i].value + "<br>";
             }
-            document.getElementById("demo").innerHTML = text;
+            document.getElementById("w3review").innerHTML = text + 1;
         }
     </script>
 
