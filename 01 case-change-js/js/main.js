@@ -43,7 +43,9 @@ function lowerCase() {
     for (i = 0; i < x.length; i++) {
         text += x.elements[i].value;
     }
-    
+
     text = text.toLowerCase();
     document.getElementById('userInput').value = text;
+
+    str = text.split(' ');
 }
