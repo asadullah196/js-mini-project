@@ -43,5 +43,7 @@ function lowerCase() {
     for (i = 0; i < x.length; i++) {
         text += x.elements[i].value;
     }
-    document.getElementById('userInput').value = text.toUpperCase();
+    
+    text = text.toLowerCase();
+    document.getElementById('userInput').value = text;
 }
