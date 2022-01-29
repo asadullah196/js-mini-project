@@ -45,11 +45,13 @@ function sentanceCase() {
     }
 
     text = text.toLowerCase();
-    //document.getElementById('userInput').value = text;
+    // document.getElementById('userInput').value = text;
 
-    /*
     str = text.split(' ');
 
+    document.getElementById('userInput').value = str;
+
+    /*
     for (var i = 0; i < str.length; i++) {
         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
     }
