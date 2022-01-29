@@ -20,7 +20,7 @@ function lowerCase() {
  * @returns string/input
  */
 
- function upperCase() {
+function upperCase() {
     var x = document.getElementById("formInput");
     var text = "";
     var i;
@@ -36,7 +36,7 @@ function lowerCase() {
  * @returns string/input
  */
 
- function sentanceCase() {
+function sentanceCase() {
     var x = document.getElementById("formInput");
     var text = "";
     var i;
@@ -45,7 +45,17 @@ function lowerCase() {
     }
 
     text = text.toLowerCase();
-    document.getElementById('userInput').value = text;
+    //document.getElementById('userInput').value = text;
 
+    /*
     str = text.split(' ');
+
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+
+    // Step 4. Return the output
+    return str.join(' '); // ["I'm", "A", "Little", "Tea", "Pot"].join(' ') => "I'm A Little Tea Pot"
+
+    */
 }
