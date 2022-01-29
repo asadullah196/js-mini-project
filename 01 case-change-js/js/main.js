@@ -44,20 +44,45 @@ function sentanceCase() {
         text += x.elements[i].value;
     }
 
+    let str = text.toLowerCase();
+
+    //document.getElementById('userInput').value = str;
+
+    function sentanceCaseFunction(str) {
+
+        // Step 1. Lowercase the string
+        str = str.toLowerCase();
+        // str = "I'm a little tea pot".toLowerCase();
+        // str = "i'm a little tea pot";
+
+        // Step 2. Split the string into an array of strings
+        str = str.split(' ');
+        // str = "i'm a little tea pot".split(' ');
+        // str = ["i'm", "a", "little", "tea", "pot"];
+
+        // Step 3. Create the FOR loop
+        for (var i = 0; i < str.length; i++) {
+            str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+        }
+
+        // Step 4. Return the output
+        return str.join(' '); // ["I'm", "A", "Little", "Tea", "Pot"].join(' ') => "I'm A Little Tea Pot"
+
+    }
+
+    /*
     text = text.toLowerCase();
     // document.getElementById('userInput').value = text;
 
     str = text.split(' ');
+    //document.getElementById('userInput').value = str;
 
-    document.getElementById('userInput').value = str;
 
-    /*
     for (var i = 0; i < str.length; i++) {
         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
     }
 
     // Step 4. Return the output
-    return str.join(' '); // ["I'm", "A", "Little", "Tea", "Pot"].join(' ') => "I'm A Little Tea Pot"
-
-    */
+    document.getElementById('userInput').value = str.join(' '); // ["I'm", "A", "Little", "Tea", "Pot"].join(' ') => "I'm A Little Tea Pot"
+*/
 }
