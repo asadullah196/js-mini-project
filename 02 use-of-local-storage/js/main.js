@@ -9,7 +9,14 @@ console.log("Asadullah Galib!");
 var clicks = 0;
 var buttonImage = document.getElementById('buttonImage');
 buttonImage.onclick = function () {
-    console.log(++clicks);
+    
+    if(clicks%2 === 0) {
+        console.log("Even Number " + clicks);
+    }else {
+        console.log("Odd Number " + clicks);
+    }
+
+    clicks++;
 }
 
 function changeTheme() {
