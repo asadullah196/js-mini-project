@@ -12,8 +12,10 @@ buttonImage.onclick = function () {
     
     if(clicks%2 === 0) {
         console.log("Even Number " + clicks);
+        document.getElementById('buttonImage').src='./img/sun.png';
     }else {
         console.log("Odd Number " + clicks);
+        document.getElementById('buttonImage').src='./img/moon.png';
     }
 
     clicks++;
