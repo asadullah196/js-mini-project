@@ -2,7 +2,7 @@
  * Just "Hello" statement for test
  */
 
-console.log("Asadullah Galib!");
+//console.log("Asadullah Galib!");
 
 // Counts the click numbers
 
