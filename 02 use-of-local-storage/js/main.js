@@ -17,7 +17,16 @@ buttonImage.onclick = function () {
 
         localStorage.setItem("imageName","./img/sun.png");
         //console.log(localStorage.getItem("imageName"));
-        document.getElementById('buttonImage').src = localStorage.getItem("imageName");
+
+        if(localStorage){
+            //console.log(localStorage.getItem("imageName"));
+            document.getElementById('buttonImage').src = localStorage.getItem("imageName");
+        } else {
+            document.getElementById('buttonImage').src = './img/sun.png';
+        }
+        
+        
+        //document.getElementById('buttonImage').src = localStorage.getItem("imageName");
 
         document.getElementById("myName").style.color = '#000000';
         document.getElementById("main-body").style.backgroundColor = '#ffffff';
@@ -26,8 +35,16 @@ buttonImage.onclick = function () {
         // Pass Data to local storage
 
         localStorage.setItem("imageName","./img/moon.png");
+
+        if(localStorage){
+            //console.log(localStorage.getItem("imageName"));
+            document.getElementById('buttonImage').src = localStorage.getItem("imageName");
+        } else {
+            document.getElementById('buttonImage').src = './img/moon.png';
+        }
+
         //console.log(localStorage.getItem("imageName"));
-        document.getElementById('buttonImage').src = localStorage.getItem("imageName");
+        //document.getElementById('buttonImage').src = localStorage.getItem("imageName");
 
         //console.log("Odd Number " + clicks);
         //document.getElementById('buttonImage').src='./img/moon.png';
