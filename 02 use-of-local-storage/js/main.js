@@ -4,13 +4,28 @@
 
 //console.log("Asadullah Galib!");
 
+
+clickCounter();
+
+function clickCounter() {
+    if (localStorage.clickcount) {
+
+        console.log(localStorage.clickcount);
+
+        localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    } else {
+        localStorage.clickcount = 1;
+    }
+    document.getElementById("demo").innerHTML = localStorage.clickcount;
+}
+
 // Counts the click numbers
 
 var clicks = 0;
 var buttonImage = document.getElementById('buttonImage');
 buttonImage.onclick = function () {
-    
-    localStorage.setItem("myNumber","1");
+
+    localStorage.setItem("myNumber", "1");
 
     let myNum = localStorage.getItem("myNumber");
     console.log(myNum);
