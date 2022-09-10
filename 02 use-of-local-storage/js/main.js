@@ -12,12 +12,25 @@ buttonImage.onclick = function () {
     
     if(clicks%2 === 0) {
         //console.log("Even Number " + clicks);
-        document.getElementById('buttonImage').src='./img/sun.png';
+
+        // Pass Data to local storage
+
+        localStorage.setItem("imageName","./img/sun.png");
+        //console.log(localStorage.getItem("imageName"));
+        document.getElementById('buttonImage').src = localStorage.getItem("imageName");
+
         document.getElementById("myName").style.color = '#000000';
         document.getElementById("main-body").style.backgroundColor = '#ffffff';
     }else {
+
+        // Pass Data to local storage
+
+        localStorage.setItem("imageName","./img/moon.png");
+        //console.log(localStorage.getItem("imageName"));
+        document.getElementById('buttonImage').src = localStorage.getItem("imageName");
+
         //console.log("Odd Number " + clicks);
-        document.getElementById('buttonImage').src='./img/moon.png';
+        //document.getElementById('buttonImage').src='./img/moon.png';
         document.getElementById("myName").style.color = '#ffffff';
         document.getElementById("main-body").style.backgroundColor = '#000000';
     }
