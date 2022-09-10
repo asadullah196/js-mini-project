@@ -10,6 +10,13 @@ var clicks = 0;
 var buttonImage = document.getElementById('buttonImage');
 buttonImage.onclick = function () {
     
+    localStorage.setItem("myNumber","1");
+
+    let myNum = localStorage.getItem("myNumber");
+    console.log(myNum);
+
+
+    /*
     if(clicks%2 === 0) {
         //console.log("Even Number " + clicks);
 
@@ -53,6 +60,7 @@ buttonImage.onclick = function () {
     }
 
     clicks++;
+    */
 }
 
 function changeTheme() {
