@@ -23,10 +23,10 @@ buttonImage1.onclick = function () {
 
         if (localStorage) {
             //console.log(localStorage.getItem("imageName"));
-            document.getElementById('buttonImage').src = localStorage.getItem("imageName");
+            document.getElementById('buttonImage').style.src = localStorage.getItem("imageName");
 
         } else {
-            document.getElementById('buttonImage').src = './img/sun.png';
+            document.getElementById('buttonImage').style.src = './img/sun.png';
         }
 
         document.getElementById("myName").style.color = '#000000';
@@ -39,10 +39,10 @@ buttonImage1.onclick = function () {
 
         if (localStorage) {
             //console.log(localStorage.getItem("imageName"));
-            document.getElementById('buttonImage').src = localStorage.getItem("imageName");
+            document.getElementById('buttonImage').style.src = localStorage.getItem("imageName");
 
         } else {
-            document.getElementById('buttonImage').src = './img/moon.png';
+            document.getElementById('buttonImage').style.src = './img/moon.png';
         }
 
         document.getElementById("myName").style.color = '#ffffff';

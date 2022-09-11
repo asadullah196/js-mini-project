@@ -13,12 +13,22 @@
     <div class="main-body" id="main-body">
 
         <h1 id="myName">This is Galib!</h1>
-        <img src="./img/moon.png" alt="Moon Picture" srcset="" id="buttonImage"/>
+        <img src="" onclick = "myImageFunction();" alt="Moon Picture" srcset="" id="buttonImage"/>
 
     </div>
 
     <footer>
         <script src="./js/main.js"></script>
+        
+        <script>
+            function myImageFunction() {
+                let myImageSrc = localStorage.getItem("imageName");
+                document.getElementById('buttonImage').style.src = myImageSrc;
+            }
+            
+            myImageFunction();
+        </script>
+        
         <!-- <script src="./js/localstorage.js"></script> -->
     </footer>
 </body>
