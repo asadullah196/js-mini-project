@@ -43,7 +43,7 @@ function changeTheme() {
             localStorage.setItem("imageName", "./img/sun.png");
             //console.log(localStorage.getItem("imageName"));
 
-            if (!localStorage) {
+            if (localStorage) {
                 //console.log(localStorage.getItem("imageName"));
                 document.getElementById('buttonImage').src = localStorage.getItem("imageName");
             } else {
@@ -61,7 +61,7 @@ function changeTheme() {
 
             localStorage.setItem("imageName", "./img/moon.png");
 
-            if (!localStorage) {
+            if (localStorage) {
                 //console.log(localStorage.getItem("imageName"));
                 document.getElementById('buttonImage').src = localStorage.getItem("imageName");
             } else {
