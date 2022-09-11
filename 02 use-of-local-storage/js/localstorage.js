@@ -1,3 +1,10 @@
 function myLocalStorage() {
-    console.log("Hello Galib");
+
+    localStorage.setItem("myName", "Asadullah");
+
+    console.log(localStorage.getItem("myName"));
+    
+   // console.log("Hello Galib");
 }
+
+myLocalStorage();
