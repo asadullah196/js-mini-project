@@ -17,12 +17,15 @@
 
         // Count the click to store some data
         var clicks = 0;
+
+        // Get the buttion by ID
         var myClicks = document.getElementById('myButton');
 
+        // Check if the local storage has any value or not
         if (localStorage.getItem("myName")) {
 
             document.getElementById("myName01").innerHTML = localStorage.getItem("myName");
-            
+
         } else {
 
             localStorage.setItem("myName", "Smith");
@@ -31,9 +34,6 @@
         }
 
         myClicks.onclick = function () {
-            //console.log(clicks);
-            //localStorage.setItem("myName", "Smith");
-            //document.getElementById("myName01").innerHTML = localStorage.getItem("myName");
 
             if (clicks % 2 === 0 && clicks % 3 === 0) {
 
@@ -54,46 +54,8 @@
 
             clicks++;
 
-            /*
-
-            if(clicks % 2 === 0 && clicks % 3 === 0) {
-
-                //console.log("Top " + localStorage.getItem(myName));
-
-                // localStorage.setItem("lastname", "Smith");
-                // localStorage.setItem("myName", "Asadullah A");
-                // console.log("Top " +localStorage.getItem("myName"));
-
-                if(localStorage.getItem(myName) != null ){
-                    // console.log(localStorage.getItem(myName));
-                }else {
-                    localStorage.setItem("myName", "Asadullah A");
-                    //console.log("If " + localStorage.getItem("myName"));
-                }
-
-                //console.log("A = " + clicks);
-            }else if(clicks % 2 === 0) {
-                //console.log("B = " + clicks);
-
-            }else{
-                //console.log("C = " + clicks);
-            }
-
-            clicks++;
-
-            */
-            console.log("First " + localStorage.getItem("myName"));
+            //console.log("First " + localStorage.getItem("myName"));
         }
-
-        /*
-        let myName0 = document.getElementById("myName").innerHTML;
-
-        if (myName0.length === 0) {
-            console.log("Empty Asadullah");
-            localStorage.setItem("myName1", "Local Storage");
-
-            document.getElementById("myName").innerHTML = localStorage.getItem("myName1");
-        } */
 
     </script>
 </body>
