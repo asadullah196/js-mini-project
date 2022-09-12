@@ -21,6 +21,7 @@ buttonImage1.onclick = function () {
         localStorage.setItem("imageName", "./img/sun.png");
         //console.log(localStorage.getItem("imageName"));
 
+        /*
         if (localStorage) {
             //console.log(localStorage.getItem("imageName"));
             document.getElementById('buttonImage').style.src = localStorage.getItem("imageName");
@@ -29,6 +30,8 @@ buttonImage1.onclick = function () {
             document.getElementById('buttonImage').style.src = './img/sun.png';
         }
 
+        */
+       
         document.getElementById("myName").style.color = '#000000';
         document.getElementById("main-body").style.backgroundColor = '#ffffff';
     } else {
@@ -37,6 +40,8 @@ buttonImage1.onclick = function () {
 
         localStorage.setItem("imageName", "./img/moon.png");
 
+        /*
+
         if (localStorage) {
             //console.log(localStorage.getItem("imageName"));
             document.getElementById('buttonImage').style.src = localStorage.getItem("imageName");
@@ -44,6 +49,8 @@ buttonImage1.onclick = function () {
         } else {
             document.getElementById('buttonImage').style.src = './img/moon.png';
         }
+
+        */
 
         document.getElementById("myName").style.color = '#ffffff';
         document.getElementById("main-body").style.backgroundColor = '#000000';

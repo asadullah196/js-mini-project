@@ -23,7 +23,10 @@
         <script>
             function myImageFunction() {
                 let myImageSrc = localStorage.getItem("imageName");
-                document.getElementById('buttonImage').style.src = myImageSrc;
+
+                console.log("01 - " + myImageSrc);
+                
+                document.getElementById('buttonImage').src = myImageSrc;
 
                 //console.log("01 - " + document.getElementById('buttonImage').style.src);
                 //console.log("01 - " + document.getElementById('buttonImage').src);
