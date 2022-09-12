@@ -10,11 +10,20 @@
 
 <body>
     <h1>Heading Goes Here!</h1>
-    <h1 id="myName"></h1>
+    <h1 id="myName"></h1> <br><br>
+    <button id="myButton">Hello Click Me</button>
 
     <script>
 
         // Count the click to store some data
+        var clicks = 0;
+        var myClicks = document.getElementById('myButton');
+
+
+        myClicks.onclick = function () { 
+            console.log(clicks);
+            clicks++;
+        }
 
         let myName0 = document.getElementById("myName").innerHTML;
 
