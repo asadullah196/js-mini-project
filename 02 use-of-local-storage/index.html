@@ -13,31 +13,8 @@
     <div class="main-body" id="main-body">
 
         <h1 id="myName">This is Galib!</h1>
-        <img src="" onclick = "myImageFunction();" alt="Moon Picture" srcset="" id="buttonImage"/>
-
+        
     </div>
-
-    <footer>
-        <script src="./js/main.js"></script>
-        
-        <script>
-            function myImageFunction() {
-                let myImageSrc = localStorage.getItem("imageName");
-
-                console.log("01 - " + myImageSrc);
-                
-                document.getElementById('buttonImage').src = myImageSrc;
-
-                //console.log("01 - " + document.getElementById('buttonImage').style.src);
-                //console.log("01 - " + document.getElementById('buttonImage').src);
-                //console.log("01 - " + myImageSrc);
-            }
-            
-            myImageFunction();
-        </script>
-        
-        <!-- <script src="./js/localstorage.js"></script> -->
-    </footer>
 </body>
 
 </html>
