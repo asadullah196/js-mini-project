@@ -23,6 +23,42 @@
             // Get the buttion by ID
             var myClicks = document.getElementById('buttonImage');
 
+            // Check if the local storage has any value or not
+            if (localStorage.getItem("myName01")) {
+
+                document.getElementById("myName").innerHTML = localStorage.getItem("myName01");
+
+            } else {
+
+                localStorage.setItem("myName01", "Smith");
+                document.getElementById("myName").innerHTML = localStorage.getItem("myName");
+
+            }
+
+            myClicks.onclick = function () {
+
+                if (clicks % 2 === 0 && clicks % 3 === 0) {
+
+                    localStorage.setItem("myName01", "Smith 1-2-3");
+                    document.getElementById("myName").innerHTML = localStorage.getItem("myName01");
+
+                } else if (clicks % 2 === 0) {
+
+                    localStorage.setItem("myName01", "Smith 1-2");
+                    document.getElementById("myName").innerHTML = localStorage.getItem("myName01");
+
+                } else {
+
+                    localStorage.setItem("myName01", "Smith 1");
+                    document.getElementById("myName").innerHTML = localStorage.getItem("myName01");
+
+                }
+
+                clicks++;
+
+                //console.log("First " + localStorage.getItem("myName"));
+            }
+
         </script>
 
     </div>
