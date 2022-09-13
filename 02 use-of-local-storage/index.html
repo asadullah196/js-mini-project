@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <div class="main-body" id="main-body">
+    <div class="main-body" id="fullBody">
 
-        <h1 id="myName"></h1>
-        <img src="" alt="Moon Picture" srcset="" id="buttonImage" style="width:120px; height:120px ;"/>
+        <h1 id="myName">Md. Asadullah Galib</h1>
+        <img src="./img/sun.png" alt="Moon Picture" srcset="" id="buttonImage" style="width:120px; height:120px ;" />
 
         <script>
 
@@ -38,35 +38,55 @@
 
             */
 
-            if (localStorage.getItem("buttonImage01")) {
+            if (localStorage.getItem("buttonImage01") || localStorage.getItem("nameColor") || localStorage.getItem("bodyBg")) {
 
-                document.getElementById("buttonImage").src = localStorage.getItem("buttonImage01");
-
-            } else {
-
-                localStorage.setItem("buttonImage01", "./img/sun.png");
+                document.getElementById("myName").style.color = localStorage.getItem("nameColor");
+                document.getElementById("fullBody").style.backgroundColor = localStorage.getItem("bodyBg");
                 document.getElementById("buttonImage").src = localStorage.getItem("buttonImage01");
 
             }
 
             myClicks.onclick = function () {
 
+                /*
                 if (clicks % 2 === 0 && clicks % 3 === 0) {
 
-                    // Set and assign image
+                    // Set datas to local storage
+                    localStorage.setItem("nameColor", "#ae639b");
+                    localStorage.setItem("bodyBg", "#929681");
                     localStorage.setItem("buttonImage01", "./img/1.png");
+
+                    // Fetch and display data to front end
+                    document.getElementById("myName").style.color = localStorage.getItem("nameColor");
+                    document.getElementById("fullBody").style.backgroundColor = localStorage.getItem("bodyBg");
                     document.getElementById("buttonImage").src = localStorage.getItem("buttonImage01");
 
-                } else if (clicks % 2 === 0) {
+                } else 
 
-                    // Set and assign image
+                */
+                
+                if (clicks % 2 === 0) {
+
+                    // Set datas to local storage
+                    localStorage.setItem("nameColor", "#ae639b");
+                    localStorage.setItem("bodyBg", "#929681");
                     localStorage.setItem("buttonImage01", "./img/2.png");
+
+                    // Fetch and display data to front end
+                    document.getElementById("myName").style.color = localStorage.getItem("nameColor");
+                    document.getElementById("fullBody").style.backgroundColor = localStorage.getItem("bodyBg");
                     document.getElementById("buttonImage").src = localStorage.getItem("buttonImage01");
 
                 } else {
 
-                    // Set and assign image
+                    // Set datas to local storage
+                    localStorage.setItem("nameColor", "#ae639b");
+                    localStorage.setItem("bodyBg", "#929681");
                     localStorage.setItem("buttonImage01", "./img/3.png");
+
+                    // Fetch and display data to front end
+                    document.getElementById("myName").style.color = localStorage.getItem("nameColor");
+                    document.getElementById("fullBody").style.backgroundColor = localStorage.getItem("bodyBg");
                     document.getElementById("buttonImage").src = localStorage.getItem("buttonImage01");
 
                 }
