@@ -12,8 +12,8 @@
 <body>
     <div class="main-body" id="fullBody">
 
-        <h1 id="myName">Md. Asadullah Galib</h1>
-        <img src="./img/sun.png" alt="Moon Picture" srcset="" id="buttonImage" style="width:120px; height:120px ;" />
+        <h1 id="myName">Asadullah Galib</h1>
+        <img src="./img/moon.png" alt="Moon Picture" srcset="" id="buttonImage" style="width:120px; height:120px ;" />
 
         <script>
 
@@ -68,9 +68,9 @@
                 if (clicks % 2 === 0) {
 
                     // Set datas to local storage
-                    localStorage.setItem("nameColor", "#ae639b");
-                    localStorage.setItem("bodyBg", "#929681");
-                    localStorage.setItem("buttonImage01", "./img/2.png");
+                    localStorage.setItem("nameColor", "#fff");
+                    localStorage.setItem("bodyBg", "#000");
+                    localStorage.setItem("buttonImage01", "./img/moon.png");
 
                     // Fetch and display data to front end
                     document.getElementById("myName").style.color = localStorage.getItem("nameColor");
@@ -80,9 +80,9 @@
                 } else {
 
                     // Set datas to local storage
-                    localStorage.setItem("nameColor", "#ae639b");
-                    localStorage.setItem("bodyBg", "#929681");
-                    localStorage.setItem("buttonImage01", "./img/3.png");
+                    localStorage.setItem("nameColor", "#000");
+                    localStorage.setItem("bodyBg", "#fff");
+                    localStorage.setItem("buttonImage01", "./img/sun.png");
 
                     // Fetch and display data to front end
                     document.getElementById("myName").style.color = localStorage.getItem("nameColor");
