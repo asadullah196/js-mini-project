@@ -18,3 +18,10 @@ body {
     overflow: scroll;
     border-radius: 0.6rem;
 }
+
+input#todo-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
