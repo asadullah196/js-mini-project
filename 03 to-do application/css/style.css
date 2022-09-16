@@ -4,7 +4,12 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+#full-body {
+    margin: 50px;
+}
+
 .container {
+    text-align: center;
     background-color: #222;
     color: white;
     padding: 1rem;
