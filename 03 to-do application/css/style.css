@@ -15,7 +15,6 @@ body {
     padding: 1rem;
     min-height: 80vh;
     width: 580px;
-    overflow: scroll;
     border-radius: 0.6rem;
 }
 
