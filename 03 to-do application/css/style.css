@@ -20,8 +20,23 @@ body {
 }
 
 input#todo-input {
-    background: transparent;
+    border: none;
+    color: #85929E;
+    font-size: 18px;
+	outline: none;
+	background: none;
+}
+
+button#todo-submit {
+    background: #3498DB;
     border: none;
     color: #fff;
-    font-size: 18px;
+    font-family: 'Poppins';
+    border-radius: 4px;
+    padding: 5px 20px;
+}
+
+h3#top-output {
+    text-align: start;
+    padding-left: 120px;
 }
