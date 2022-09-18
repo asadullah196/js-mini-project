@@ -7,4 +7,10 @@ let myId = document.getElementById("todo-submit").innerHTML;
 function saveTodo() {
     const todoInput = document.getElementById("todo-input").value;
 
+    let myNumber = 2;
+
+    if (myNumber === 2) {
+        alert("Data Saved!");
+        document.getElementById("todo-input").value = '';
+    }
 }
