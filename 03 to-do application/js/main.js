@@ -1,6 +1,4 @@
 // Log test
-
-console.log("Asad");
 let myName = "Asadullah";
 console.log("myName");
 
