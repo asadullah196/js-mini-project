@@ -14,8 +14,13 @@ function creatTodo(todoID, todoInput) {
 
     const todoIDValue = todoID;
     const todoInputValue = todoInput;
-    console.log("X value = " + todoIDValue);
-    console.log("y value = " + todoInputValue);
+    //console.log("X value = " + todoIDValue);
+    //console.log("y value = " + todoInputValue);
+
+    var toDoElements = document.createElement("li");
+    var myNam = toDoElements.innerHTML = "Asad0";
+
+    todoList.appendChild(toDoElements);
 
     /*
     //const todoElement = document.createElement("li");
