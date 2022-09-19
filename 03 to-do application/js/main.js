@@ -2,17 +2,29 @@
 let myName = "Asadullah";
 console.log("myName");
 
-let myId = document.getElementById("todo-submit").innerHTML;
+//let myId = document.getElementById("todo-submit").innerHTML;
 
-const todoList = "xyz";
+const todoList = document.getElementById("sample-output-list");
 
 // Todo function
-function creatTodo (todoID, todoInput) {
+function creatTodo(todoID, todoInput) {
 
-    const toDoElements = document.createElement("li");
+    //const toDoElements = document.createElement("li");
+    const todoElement = document.createElement("li");
 
     const x = todoID;
-    console.log("X value = " + todoList);
+    const y = todoInput;
+    //console.log("X value = " + todoList);
+
+    /*
+    //const todoElement = document.createElement("li");
+    toDoElements.id = x;
+    toDoElements.innerHTML = `
+    <span> ${y} </span>
+  `;
+    todoList.appendChild(todoElements);
+
+    */
 }
 
 //S saveTodo function for recieving input data
