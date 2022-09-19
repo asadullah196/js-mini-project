@@ -18,13 +18,20 @@ function creatTodo(todoID, todoInput) {
     //console.log("y value = " + todoInputValue);
 
     var toDoElements = document.createElement("li");
-    var myNam = toDoElements.innerHTML = `
-    <span> ${todoInputValue} </span>
-    <i class="fa fa-times" aria-hidden="true"></i>
+
+    toDoElements.innerHTML = `
+    <span> ${todoInputValue} </span>&nbsp;&nbsp;
+    <i class="fa fa-times" aria-hidden="true"></i>&nbsp;
     <i class="fa fa-check" aria-hidden="true"></i>
   `;
 
+    toDoElements.classList.add(todoIDValue);
+
     todoList.appendChild(toDoElements);
+
+    // Delete To Do Items
+    //const element = document.getElementById("demo");
+    //element.remove();
 
     /*
     //const todoElement = document.createElement("li");
