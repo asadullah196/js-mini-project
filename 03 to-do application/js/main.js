@@ -9,6 +9,10 @@ function saveTodo() {
     const todoID = Date.now().toString();
     const todoInput = document.getElementById("todo-input").value;
 
+    // Pass the id and inpuit value to new function
+
+    
+
     /* code for testing
     let myNumber = 2;
 
