@@ -18,7 +18,11 @@ function creatTodo(todoID, todoInput) {
     //console.log("y value = " + todoInputValue);
 
     var toDoElements = document.createElement("li");
-    var myNam = toDoElements.innerHTML = "Asad0";
+    var myNam = toDoElements.innerHTML = `
+    <span> ${todoInputValue} </span>
+    <i class="fa fa-times" aria-hidden="true"></i>
+    <i class="fa fa-check" aria-hidden="true"></i>
+  `;
 
     todoList.appendChild(toDoElements);
 
