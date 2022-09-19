@@ -30,8 +30,8 @@ function creatTodo(todoID, todoInput) {
     todoList.appendChild(toDoElements);
 
     // Delete To Do Items
-    //const element = document.getElementById("demo");
-    //element.remove();
+    //const deleteTodoItems = document.getElementsByClassName(todoIDValue);
+    //deleteTodoItems.remove();
 
     /*
     //const todoElement = document.createElement("li");
