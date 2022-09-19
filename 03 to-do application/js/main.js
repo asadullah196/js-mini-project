@@ -1,6 +1,6 @@
 // Log test
 let myName = "Asadullah";
-console.log("myName");
+//console.log("myName");
 
 //let myId = document.getElementById("todo-submit").innerHTML;
 
@@ -12,9 +12,10 @@ function creatTodo(todoID, todoInput) {
     //const toDoElements = document.createElement("li");
     const todoElement = document.createElement("li");
 
-    const x = todoID;
-    const y = todoInput;
-    //console.log("X value = " + todoList);
+    const todoIDValue = todoID;
+    const todoInputValue = todoInput;
+    console.log("X value = " + todoIDValue);
+    console.log("y value = " + todoInputValue);
 
     /*
     //const todoElement = document.createElement("li");
@@ -46,6 +47,6 @@ function saveTodo() {
     }
     */
 
-    console.log("Item 1 = " + todoID);
-    console.log("Item 2 = " + todoInput);
+    //console.log("Item 1 = " + todoID);
+    //console.log("Item 2 = " + todoInput);
 }
