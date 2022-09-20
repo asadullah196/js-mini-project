@@ -20,16 +20,21 @@ function creatTodo(todoID, todoInput) {
   //Push todo into local storage
 
   const myTodos = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : [];
-  myTodos.push({todoIDValue, todoInputValue});
+  myTodos.push({ todoIDValue, todoInputValue });
   localStorage.setItem("todos", JSON.stringify(myTodos));
 
+   console.log(myTodos);
+  // let tasks = Array.from(myTodos);
+  // console.log(tasks);
+
   myTodos.value = "";
+  let todoIDValue1 = "1663693839937";
 
   // Display todos in front end
   var toDoElements = document.createElement("li");
 
   toDoElements.innerHTML = `
-    <span> ${todoInputValue} </span>&nbsp;&nbsp;
+    <span> ${myTodos.todoIDValue1} </span>&nbsp;&nbsp;
     <i class="fa fa-times" aria-hidden="true"></i>&nbsp;
     <i class="fa fa-check" aria-hidden="true"></i>
   `;
@@ -52,6 +57,8 @@ function creatTodo(todoID, todoInput) {
 
   */
 }
+
+// console.log(" Reload " + localStorage.getItem("todos"));
 
 //S saveTodo function for recieving input data
 function saveTodo() {
