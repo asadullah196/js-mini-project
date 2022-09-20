@@ -9,60 +9,69 @@ const todoList = document.getElementById("sample-output-list");
 // Todo function
 function creatTodo(todoID, todoInput) {
 
-    //const toDoElements = document.createElement("li");
-    const todoElement = document.createElement("li");
+  //const toDoElements = document.createElement("li");
+  const todoElement = document.createElement("li");
 
-    const todoIDValue = todoID;
-    const todoInputValue = todoInput;
-    //console.log("X value = " + todoIDValue);
-    //console.log("y value = " + todoInputValue);
+  const todoIDValue = todoID;
+  const todoInputValue = todoInput;
+  //console.log("X value = " + todoIDValue);
+  //console.log("y value = " + todoInputValue);
 
-    var toDoElements = document.createElement("li");
+  //Push todo into local storage
 
-    toDoElements.innerHTML = `
+  const myTodos = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : [];
+  myTodos.push({todoIDValue, todoInputValue});
+  localStorage.setItem("todos", JSON.stringify(myTodos));
+
+  myTodos.value = "";
+
+  // Display todos in front end
+  var toDoElements = document.createElement("li");
+
+  toDoElements.innerHTML = `
     <span> ${todoInputValue} </span>&nbsp;&nbsp;
     <i class="fa fa-times" aria-hidden="true"></i>&nbsp;
     <i class="fa fa-check" aria-hidden="true"></i>
   `;
 
-    toDoElements.classList.add(todoIDValue);
+  toDoElements.classList.add(todoIDValue);
 
-    todoList.appendChild(toDoElements);
+  todoList.appendChild(toDoElements);
 
-    // Delete To Do Items
-    //const deleteTodoItems = document.getElementsByClassName(todoIDValue);
-    //deleteTodoItems.remove();
+  // Delete To Do Items
+  //const deleteTodoItems = document.getElementsByClassName(todoIDValue);
+  //deleteTodoItems.remove();
 
-    /*
-    //const todoElement = document.createElement("li");
-    toDoElements.id = x;
-    toDoElements.innerHTML = `
-    <span> ${y} </span>
-  `;
-    todoList.appendChild(todoElements);
+  /*
+  //const todoElement = document.createElement("li");
+  toDoElements.id = x;
+  toDoElements.innerHTML = `
+  <span> ${y} </span>
+`;
+  todoList.appendChild(todoElements);
 
-    */
+  */
 }
 
 //S saveTodo function for recieving input data
 function saveTodo() {
 
-    const todoID = Date.now().toString();
-    const todoInput = document.getElementById("todo-input").value;
+  const todoID = Date.now().toString();
+  const todoInput = document.getElementById("todo-input").value;
 
-    // Pass the id and inpuit value to new function
+  // Pass the id and inpuit value to new function
 
-    creatTodo(todoID, todoInput);
+  creatTodo(todoID, todoInput);
 
-    /* code for testing
-    let myNumber = 2;
+  /* code for testing
+  let myNumber = 2;
 
-    if (myNumber === 2) {
-        alert("Data Saved!");
-        document.getElementById("todo-input").value = '';
-    }
-    */
+  if (myNumber === 2) {
+      alert("Data Saved!");
+      document.getElementById("todo-input").value = '';
+  }
+  */
 
-    //console.log("Item 1 = " + todoID);
-    //console.log("Item 2 = " + todoInput);
+  //console.log("Item 1 = " + todoID);
+  //console.log("Item 2 = " + todoInput);
 }
