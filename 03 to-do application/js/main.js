@@ -23,7 +23,8 @@ function creatTodo(todoID, todoInput) {
   myTodos.push({ todoIDValue, todoInputValue });
   localStorage.setItem("todos", JSON.stringify(myTodos));
 
-   console.log(myTodos.length);
+   console.log(myTodos);
+
    console.log(myTodos.length);
   // let tasks = Array.from(myTodos);
   // console.log(tasks);
