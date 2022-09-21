@@ -10,7 +10,8 @@ const todoList = document.getElementById("sample-output-list");
 function creatTodo(todoID, todoInput) {
 
   //const toDoElements = document.createElement("li");
-  const todoElement = document.createElement("li");
+  // const todoElement = document.createElement("li");
+  const todoElement = document.getElementById("sample-output-list");
 
   const todoIDValue = todoID;
   const todoInputValue = todoInput;
@@ -33,12 +34,17 @@ function creatTodo(todoID, todoInput) {
   <input type="text" value="${todoInputValue.todoIDValue}" class="task"></input>
   `;
 
+  todoElement.insertBefore(toDoElements, todoElement.children[0]);
+  // clear input
+  todoInputValue.todoIDValue = "";
+
   //console.log(myTodos);
 
   //tasks = todos
   // task = todo-input, or todo-submit, todoInputValue
   // li = toDoElements
   // task.value = todoInputValue.todoIDValue
+  // list = todoElement
 
   // Check if there is any value in local storage or not
 
@@ -57,6 +63,7 @@ function creatTodo(todoID, todoInput) {
  */
   //console.log(myTodos.todoInputValue);
 
+  /*
   // Display todos in front end
   var toDoElements = document.createElement("li");
 
