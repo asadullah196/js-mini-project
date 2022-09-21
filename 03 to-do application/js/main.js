@@ -26,9 +26,11 @@ function creatTodo(todoID, todoInput) {
 
   //console.log(myTodos);
 
+  //tasks = todos
+
   // Check if there is any value in local storage or not
 
-  
+
   //console.log(myTodos.length);
   // let tasks = Array.from(myTodos);
   // console.log(tasks);
