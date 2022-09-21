@@ -23,16 +23,26 @@ function creatTodo(todoID, todoInput) {
   myTodos.push({ todoIDValue, todoInputValue });
   localStorage.setItem("todos", JSON.stringify(myTodos));
 
-   //console.log(myTodos);
+  //console.log(myTodos);
 
-   //console.log(myTodos.length);
+  //console.log(myTodos.length);
   // let tasks = Array.from(myTodos);
   // console.log(tasks);
 
   myTodos.value = "";
 
   // Testing code
-  
+  let text = "";
+  const fruits = ["apple", "orange", "cherry"];
+  fruits.forEach(myFunction);
+
+  function myFunction(item, index) {
+    text = item;
+
+    
+  }
+
+  console.log("01 " + text);
 
   // Display todos in front end
   var toDoElements = document.createElement("li");
