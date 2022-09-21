@@ -26,19 +26,28 @@ function loadTasks() {
   });
 }
 
+/*
+* <i class="fa fa-times" aria-hidden="true"></i>&nbsp;
+* <i class="fa fa-check" aria-hidden="true"></i>
+*
+*/
 function addTask() {
   const task = document.querySelector("form input");
   const list = document.querySelector("ul");
+
+  /*
   // return if task is empty
   if (task.value === "") {
     alert("Please add some task!");
     return false;
   }
+
   // check is task already exist
   if (document.querySelector(`input[value="${task.value}"]`)) {
     alert("Task already exist!");
     return false;
   }
+  */
 
   // add task to local storage 
   // done
