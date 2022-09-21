@@ -24,9 +24,21 @@ function creatTodo(todoID, todoInput) {
 
   myTodos.value = "";
 
+  //console.log("Test = " + todoIDValue);
+
+  // Display todos in front end
+  var toDoElements = document.createElement("li");
+
+  toDoElements.innerHTML = `
+  <input type="text" value="${todoInputValue.todoIDValue}" class="task"></input>
+  `;
+
   //console.log(myTodos);
 
   //tasks = todos
+  // task = todo-input, or todo-submit, todoInputValue
+  // li = toDoElements
+  // task.value = todoInputValue.todoIDValue
 
   // Check if there is any value in local storage or not
 
@@ -37,12 +49,12 @@ function creatTodo(todoID, todoInput) {
 
 
   // Testing code
-  
+  /*
   myTodos.forEach(todoLoop);
   function todoLoop(value) {
     console.log(value.todoInputValue);
   }
-
+ */
   //console.log(myTodos.todoInputValue);
 
   // Display todos in front end
