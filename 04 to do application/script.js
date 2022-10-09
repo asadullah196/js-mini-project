@@ -12,8 +12,18 @@ let form = document.querySelector('form');
 let todoUIs = document.querySelector('#items');
 let finishedTask = document.querySelector('.complete-list ul');
 
+// console.log(newTask);
+// console.log("Value" + newTask.value);
+
+// // Check input type, never trust the users
+// // return if task is empty
+// // if (newTask.value === "") {
+// //     alert("Please add some task!");
+// //     return;
+// // }
+
 // Function for creating new task
-let creatTask = function(task) {
+let creatTask = function (task) {
     let listItem = document.createElement('li');
     let checkBox = document.createElement('input');
     let label = document.createElement('label');
@@ -25,11 +35,11 @@ let creatTask = function(task) {
     listItem.appendChild(label);
 
     // console.log(listItem);
-    
+
     return listItem;
 }
 
-let addTask = function(event) {
+let addTask = function (event) {
     event.preventDefault();
     let listItem = creatTask(newTask.value);
     todoUIs.appendChild(listItem);
@@ -38,7 +48,7 @@ let addTask = function(event) {
     bindCompleteItems(listItem, completeTask);
 }
 
-let completeTask = function(){
+let completeTask = function () {
     let listItem = this.parentNode;
     let deletBtn = document.createElement('button');
     deletBtn.innerText = 'Delete Task'
@@ -52,27 +62,27 @@ let completeTask = function(){
     deleteItemsFinal(listItem, deleteTask);
 }
 
-let deleteTask = function() {
+let deleteTask = function () {
     let listItem = this.parentNode;
     let ul = listItem.parentNode;
     ul.removeChild(listItem);
 }
 
-let bindCompleteItems = function(taskItem, checkBoxClick){
+let bindCompleteItems = function (taskItem, checkBoxClick) {
     let checkBox = taskItem.querySelector('input[type="checkbox"]');
     checkBox.onchange = checkBoxClick;
 }
 
-let deleteItemsFinal = function(taskItem, deleteBtnClick) {
+let deleteItemsFinal = function (taskItem, deleteBtnClick) {
     let deleteBtn = taskItem.querySelector('.delete');
     deleteBtn.onclick = deleteBtnClick;
 }
 
-for(let i=0; i< todoUIs.children.length; i++ ) {
+for (let i = 0; i < todoUIs.children.length; i++) {
     bindCompleteItems(todoUIs.children[i], completeTask);
 }
 
-for(let i=0; i< finishedTask.children.length; i++ ) {
+for (let i = 0; i < finishedTask.children.length; i++) {
     deleteItemsFinal(finishedTask.children[i], deleteTask);
 }
 
