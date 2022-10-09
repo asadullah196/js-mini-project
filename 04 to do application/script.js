@@ -6,3 +6,8 @@
  *
  */
 
+// Select elemenst and assigned them inside variable
+let newTask = document.querySelector('#new-task');
+let form = document.querySelector('form');
+let todoUIs = document.querySelector('#items');
+let finishedTask = document.querySelector('.complete-list');
