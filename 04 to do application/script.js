@@ -12,16 +12,6 @@ let form = document.querySelector('form');
 let todoUIs = document.querySelector('#items');
 let finishedTask = document.querySelector('.complete-list ul');
 
-// console.log(newTask);
-// console.log("Value" + newTask.value);
-
-// // Check input type, never trust the users
-// // return if task is empty
-// // if (newTask.value === "") {
-// //     alert("Please add some task!");
-// //     return;
-// // }
-
 // Function for creating new task
 let creatTask = function (task) {
     let listItem = document.createElement('li');
@@ -34,18 +24,16 @@ let creatTask = function (task) {
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
 
-    // console.log(listItem);
-
     return listItem;
 }
 
+// Define addTask function
 let addTask = function (event) {
     event.preventDefault();
     let listItem = creatTask(newTask.value);
 
-    //console.log("1 - " + listItem.innerText);
-
-    if(listItem.innerText === ""){
+    // Check input value blank or not
+    if (listItem.innerText === "") {
         alert("Please add some task!");
         return;
     }
@@ -53,9 +41,12 @@ let addTask = function (event) {
     todoUIs.appendChild(listItem);
     newTask.value = "";
 
+    // Add checkbox with the list items
+    // Function call
     bindCompleteItems(listItem, completeTask);
 }
 
+// Define completeTask function
 let completeTask = function () {
     let listItem = this.parentNode;
     let deletBtn = document.createElement('button');
@@ -76,6 +67,8 @@ let deleteTask = function () {
     ul.removeChild(listItem);
 }
 
+// Add checkbox with the list items
+// Function define
 let bindCompleteItems = function (taskItem, checkBoxClick) {
     let checkBox = taskItem.querySelector('input[type="checkbox"]');
     checkBox.onchange = checkBoxClick;
@@ -86,6 +79,7 @@ let deleteItemsFinal = function (taskItem, deleteBtnClick) {
     deleteBtn.onclick = deleteBtnClick;
 }
 
+// add old todo in the list
 for (let i = 0; i < todoUIs.children.length; i++) {
     bindCompleteItems(todoUIs.children[i], completeTask);
 }
@@ -94,4 +88,5 @@ for (let i = 0; i < finishedTask.children.length; i++) {
     deleteItemsFinal(finishedTask.children[i], deleteTask);
 }
 
+// Call addTask function
 form.addEventListener('submit', addTask);
