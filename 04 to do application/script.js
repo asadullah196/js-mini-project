@@ -10,7 +10,7 @@
 let newTask = document.querySelector('#new-task');
 let form = document.querySelector('form');
 let todoUIs = document.querySelector('#items');
-let finishedTask = document.querySelector('.complete-list');
+let finishedTask = document.querySelector('.complete-list ul');
 
 // Function for creating new task
 let creatTask = function(task) {
@@ -41,13 +41,13 @@ let addTask = function(event) {
 let completeTask = function(){
     let listItem = this.parentNode;
     let deletBtn = document.createElement('button');
-    deletBtn.innerHTML = 'Delete Task'
+    deletBtn.innerText = 'Delete Task'
     deletBtn.className = 'delete';
     listItem.appendChild(deletBtn);
 
     let checkBox = listItem.querySelector('input[type="checkbox"]');
     checkBox.remove();
-    completeTask.appendChild(listItem);
+    finishedTask.appendChild(listItem);
 
     deleteItemsFinal(listItem, deleteTask);
 }
@@ -67,5 +67,6 @@ let deleteItemsFinal = function(taskItem, deleteBtnClick) {
     let deleteBtn = taskItem.querySelector('.delete');
     deleteBtn.onclick = deleteBtnClick;
 }
+
 
 form.addEventListener('submit', addTask);
