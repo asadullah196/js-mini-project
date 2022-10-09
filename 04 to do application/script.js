@@ -42,6 +42,14 @@ let creatTask = function (task) {
 let addTask = function (event) {
     event.preventDefault();
     let listItem = creatTask(newTask.value);
+
+    //console.log("1 - " + listItem.innerText);
+
+    if(listItem.innerText === ""){
+        alert("Please add some task!");
+        return;
+    }
+
     todoUIs.appendChild(listItem);
     newTask.value = "";
 
