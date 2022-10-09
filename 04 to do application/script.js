@@ -68,5 +68,12 @@ let deleteItemsFinal = function(taskItem, deleteBtnClick) {
     deleteBtn.onclick = deleteBtnClick;
 }
 
+for(let i=0; i< todoUIs.children.length; i++ ) {
+    bindCompleteItems(todoUIs.children[i], completeTask);
+}
+
+for(let i=0; i< finishedTask.children.length; i++ ) {
+    deleteItemsFinal(finishedTask.children[i], deleteTask);
+}
 
 form.addEventListener('submit', addTask);
