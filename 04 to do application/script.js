@@ -18,7 +18,7 @@ let creatTask = function(task) {
     let checkBox = document.createElement('input');
     let label = document.createElement('label');
 
-    label.innerHTML = task;
+    label.innerText = task;
     checkBox.type = 'checkbox';
 
     listItem.appendChild(checkBox);
@@ -28,3 +28,44 @@ let creatTask = function(task) {
     
     return listItem;
 }
+
+let addTask = function(event) {
+    event.preventDefault();
+    let listItem = creatTask(newTask.value);
+    todoUIs.appendChild(listItem);
+    newTask.value = "";
+
+    bindCompleteItems(listItem, completeTask);
+}
+
+let completeTask = function(){
+    let listItem = this.parentNode;
+    let deletBtn = document.createElement('button');
+    deletBtn.innerHTML = 'Delete Task'
+    deletBtn.className = 'delete';
+    listItem.appendChild(deletBtn);
+
+    let checkBox = listItem.querySelector('input[type="checkbox"]');
+    checkBox.remove();
+    completeTask.appendChild(listItem);
+
+    deleteItemsFinal(listItem, deleteTask);
+}
+
+let deleteTask = function() {
+    let listItem = this.parentNode;
+    let ul = listItem.parentNode;
+    ul.removeChild(listItem);
+}
+
+let bindCompleteItems = function(taskItem, checkBoxClick){
+    let checkBox = taskItem.querySelector('input[type="checkbox"]');
+    checkBox.onchange = checkBoxClick;
+}
+
+let deleteItemsFinal = function(taskItem, deleteBtnClick) {
+    let deleteBtn = taskItem.querySelector('.delete');
+    deleteBtn.onclick = deleteBtnClick;
+}
+
+form.addEventListener('submit', addTask);
