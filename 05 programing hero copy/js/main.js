@@ -9,15 +9,19 @@ function loadMilestones() {
           <div class="checkbox"><input type="checkbox" /></div>
           <div>
             <p>
-              Milestone 1 name
+               ${milestone.name}
               <span><i class="fas fa-chevron-down"></i></span>
             </p>
           </div>
         </div>
         <div class="hidden_panel">
-          <div class="module border-b">
-            <p>Module Name</p>
-          </div>
+          ${milestone.modules
+            .map(function (module) {
+              return `<div class="module border-b">
+              <p>${module.name}</p>
+            </div>`;
+            })
+            .join("")}
         </div>
       </div>`
     }).join(" ")}`;
