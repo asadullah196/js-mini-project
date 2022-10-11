@@ -73,4 +73,26 @@ milestoneImage.onload = function () {
   this.style.opacity = "1";
 };
 
+function markMileStone(checkbox, id) {
+  const doneList = document.querySelector(".doneList");
+  const milestonesList = document.querySelector(".milestones");
+  const item = document.getElementById(id);
+
+  if (checkbox.checked) {
+    // mark as done
+    milestonesList.removeChild(item);
+    doneList.appendChild(item);
+  } else {
+    // back to main list
+    milestonesList.appendChild(item);
+    doneList.removeChild(item);
+
+    // task - do the sorting
+    // reload list
+
+    //console.log("My ID = " + item.innerHTML);
+  }
+}
+
+
 loadMilestones();
