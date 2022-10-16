@@ -20,7 +20,7 @@ let creatTask = function (task) {
 
     // Add draggable="true"
     // .setAttribute("draggable", "true");
-
+    listItem.setAttribute("class", "item draggable");
     listItem.setAttribute("draggable", "true");
 
     label.innerText = task;
@@ -95,3 +95,34 @@ for (let i = 0; i < finishedTask.children.length; i++) {
 
 // Call addTask function
 form.addEventListener('submit', addTask);
+
+// Drag and Drop Function Goes Here
+
+document.body.addEventListener("dragstart", function(e) {
+    e.target.classList.add('dragging');
+    //draggable.classList.add('dragging');
+    console.log("Dragged!");
+});
+
+document.body.addEventListener("dragend", function(e) {
+    e.target.classList.add('dragging');
+    //draggable.classList.add('dragging');
+    console.log("Dragged End!");
+});
+
+//const draggables = document.querySelectorAll('.draggable')
+//const containers = document.querySelectorAll('.item')
+
+// draggables.forEach(draggable => {
+//   draggable.addEventListener('dragstart', () => {
+//     draggable.classList.add('dragging');
+
+    
+//   })
+
+// //   draggable.addEventListener('dragend', () => {
+// //     draggable.classList.remove('dragging');
+// //   })
+// })
+
+
