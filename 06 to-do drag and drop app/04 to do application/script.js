@@ -18,6 +18,11 @@ let creatTask = function (task) {
     let checkBox = document.createElement('input');
     let label = document.createElement('label');
 
+    // Add draggable="true"
+    // .setAttribute("draggable", "true");
+
+    listItem.setAttribute("draggable", "true");
+
     label.innerText = task;
     checkBox.type = 'checkbox';
 
